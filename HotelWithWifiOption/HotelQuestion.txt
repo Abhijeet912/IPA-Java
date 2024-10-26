@@ -1,0 +1,93 @@
+Create a Java program that manages hotel information and performs specific operations based on user input. Implement the following:
+
+Class Hotel: Define a Hotel class with the following attributes:
+
+id (int): Unique identifier for the hotel.
+name (String): Name of the hotel.
+dob (String): Date of booking in the format "dd-MMM-yyyy".
+noOfRooms (int): Number of rooms booked.
+wifi (String): Wifi availability ("yes" or "no").
+totalBill (double): Total bill for the booking.
+The class should include:
+
+A constructor to initialize these attributes.
+Getter methods for id, noOfRooms, wifi, and a getMonth() method that returns the booking month extracted from dob.
+Method noOfRoomsBookedInGivenMonth:
+
+Define a static method noOfRoomsBookedInGivenMonth that takes an array of Hotel objects and a String representing a month (e.g., "Jan") as parameters. The method should return the total number of rooms booked across all hotels in the given month.
+Method searchHotelByWifiOption:
+
+Define a static method searchHotelByWifiOption that takes an array of Hotel objects and a String representing the wifi option ("yes" or "no") as parameters.
+The method should return a list of Hotel objects where the wifi option matches the given string, sorted in descending order by totalBill.
+Main Method:
+
+Prompt the user to input data for four hotels.
+After reading the data, perform the following:
+Call noOfRoomsBookedInGivenMonth with a user-provided month and print the total number of rooms booked. If no bookings are found for that month, display "No rooms booked in the given month".
+Call searchHotelByWifiOption with a user-provided wifi option and print the id of the second hotel in the sorted list. If fewer than two hotels match the wifi option, display "No such option available".
+
+SAMPLE INPUT 1:
+1
+Hotel A
+01-Jan-2023
+5
+yes
+1200.50
+2
+Hotel B
+15-Feb-2023
+3
+no
+800.75
+3
+Hotel C
+20-Jan-2023
+4
+yes
+950.30
+4
+Hotel D
+11-Jan-2023
+6
+no
+1500.00
+Jan
+yes
+
+SAMPLE OUTPUT 1:
+15
+3
+
+
+SAMPLE INPUT 2:
+1
+Hotel E
+05-Mar-2023
+2
+no
+500.00
+2
+Hotel F
+10-Mar-2023
+7
+yes
+1100.25
+3
+Hotel G
+21-Apr-2023
+8
+no
+2500.75
+4
+Hotel H
+30-Mar-2023
+5
+yes
+1300.00
+Mar
+no
+
+SAMPLE OUTPUT 2:
+2
+No such option available
+
